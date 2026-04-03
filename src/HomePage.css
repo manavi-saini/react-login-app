@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap");
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.home-bg {
+  min-height: 100vh;
+  background: #0d0d0f;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(99,102,241,0.14) 0%, transparent 70%),
+    radial-gradient(ellipse 35% 35% at 90% 90%, rgba(244,114,182,0.08) 0%, transparent 70%);
+  font-family: "DM Sans", sans-serif;
+  color: #f1f1f3;
+}
+
+/* NAV */
+.home-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(13,13,15,0.8);
+}
+
+.nav-brand {
+  font-family: "Syne", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #818cf8;
+  letter-spacing: 0.02em;
+}
+
+.nav-right { display: flex; align-items: center; gap: 20px; }
+
+.nav-user {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.45);
+  font-weight: 400;
+}
+
+.logout-btn {
+  padding: 8px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: transparent;
+  color: rgba(255,255,255,0.6);
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.logout-btn:hover {
+  background: rgba(255,255,255,0.07);
+  color: #f1f1f3;
+  border-color: rgba(255,255,255,0.22);
+}
+
+/* MAIN */
+.home-main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 64px 24px 80px;
+}
+
+/* HERO */
+.home-hero {
+  margin-bottom: 56px;
+  animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-tag {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #818cf8;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.hero-title {
+  font-family: "Syne", sans-serif;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.hero-name { color: #818cf8; }
+
+.hero-sub {
+  color: rgba(255,255,255,0.38);
+  font-size: 1rem;
+  font-weight: 300;
+  max-width: 460px;
+  line-height: 1.6;
+}
+
+/* CARDS */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 28px 24px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s, border-color 0.2s, box-shadow 0.2s;
+  animation: fadeUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.card:hover {
+  transform: translateY(-4px);
+  background: rgba(99,102,241,0.08);
+  border-color: rgba(99,102,241,0.25);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.35);
+}
+
+.card-icon { font-size: 1.8rem; margin-bottom: 16px; }
+
+.card-title {
+  font-family: "Syne", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #f1f1f3;
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.55;
+  font-weight: 300;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
