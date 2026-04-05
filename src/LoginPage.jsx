@@ -42,7 +42,7 @@ export default function LoginPage({ onLogin }) {
             <input
               className="field-input"
               type="text"
-              placeholder="Enter username"
+              placeholder="Enter user name here"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               autoComplete="username"
